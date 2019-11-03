@@ -32,7 +32,73 @@
 
 <body>
   <div id="app" class="theme-dark">
+    <!-- Login Screen -->
+    <div class="login-screen modal-in" id="my-login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Login</div>
+            <div class="list">
+              <ul>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Username</div>
+                    <div class="item-input-wrap">
+                      <input type="text" name="username" placeholder="Your username">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Password</div>
+                    <div class="item-input-wrap">
+                      <input type="password" name="password" placeholder="Your password">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <div class="item-title item-label">Target Language</div>
+                        <div class="item-input-wrap input-dropdown-wrap">
+                          <select placeholder="Please choose language...">
+                            <option value="Male">English</option>
+                            <option value="Female">French</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <div class="item-title item-label">Mother Language</div>
+                        <div class="item-input-wrap input-dropdown-wrap">
+                          <select placeholder="Please choose language...">
+                            <option value="Male">English</option>
+                            <option value="Female">French</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+              </ul>
+            </div>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="#" class="item-link list-button login-button">Sign In</a>
+                </li>
+              </ul>
+              <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="views tabs safe-areas">
+
       <div class="toolbar toolbar-bottom tabbar-labels">
         <div class="toolbar-inner">
           <a href="#view-translate" class="tab-link">
@@ -52,22 +118,13 @@
           </a>
         </div>
       </div>
-      <p><a class="button popup-open" href="#" data-popup=".popup-login">Open Popup</a></p>
-      <div class="view view-init tab" id="view-translate" data-url="/translate/"></div>
-      <div class="view view-init tab tab-active" id="view-home" data-url="/home/"></div>
-      <div class="view view-init tab" id="view-account" data-url="/account/"></div>
+      <div class="view view-init view-translate tab" id="view-translate" data-url="/translate/"></div>
+      <div class="view view-init view-home tab tab-active" id="view-home" data-url="/home/"></div>
+      <div class="view view-init view-account tab" id="view-account" data-url="/account/"></div>
 
-      <div class="popup popup-login">
-          <div class="block">
-            <p>Login</p>
-            <!-- Close Popup -->
-            <p><a class="link popup-close" href="#">Close popup</a></p>
-            <div data-url="/"></div>
-          </div>
-        </div>
+
     </div>
-  </div>
-  <!-- built script files will be auto injected -->
+    <!-- built script files will be auto injected -->
 </body>
 
 </html>
