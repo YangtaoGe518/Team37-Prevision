@@ -1,5 +1,10 @@
 # EzTalk
 
+A mobile application that will help refugees to learn a new language suitable for integration in their new communities. There are two major features: the app will include materials to help with learning new languages and cultures; it will also allow users to build common sentences in an easy and intuitive way to be translated. The app contains different media for learning including flashcards, videos and documents. 
+
+The flashcards allow users to view example sentences or phrase with an image to help remember it and an audio clip to help pronunciation. It could track user progress to give the user a sense of accomplishment and an incentive to learn more.  Words could be grouped by category to help learning specific topics. Educational multimedia about social, economic and culture integrate can be accessed through the app and link with the related vocabulary to strengthen the understanding of those words. Lastly, there are social networking capabilities for connecting people in similar situations. 
+
+
 ## Framework7 CLI Options
 
 Framework7 app created with following options:
