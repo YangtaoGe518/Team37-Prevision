@@ -101,26 +101,30 @@
 
       <div class="toolbar toolbar-bottom tabbar-labels">
         <div class="toolbar-inner">
+          <a href="#view-home" class="tab-link tab-link-active">
+                <i class="icon f7-icons if-not-md">house_fill</i>
+                <i class="icon material-icons if-md">home</i>
+                <span class="tabbar-label">Home</span>
+          </a>
+
           <a href="#view-translate" class="tab-link">
             <i class="icon f7-icons if-not-md">search</i>
             <i class="icon material-icons if-md">search</i>
             <span class="tabbar-label">Translate</span>
           </a>
-          <a href="#view-home" class="tab-link tab-link-active">
-            <i class="icon f7-icons if-not-md">house_fill</i>
-            <i class="icon material-icons if-md">home</i>
-            <span class="tabbar-label">Home</span>
-          </a>
+
           <a href="#view-account" class="tab-link">
-            <i class="icon f7-icons if-not-md">person_crop_circle</i>
-            <i class="icon material-icons if-md">person</i>
-            <span class="tabbar-label">Account</span>
+            <i class="icon f7-icons if-not-md">person_2_fill</i>
+            <i class="icon material-icons if-md">person_alt</i>
+            <span class="tabbar-label">Social</span>
           </a>
         </div>
       </div>
-      <div class="view view-init view-translate tab" id="view-translate" data-url="/translate/"></div>
+
+      <!-- Home, Translate, Social (left to right) -->
       <div class="view view-init view-home tab tab-active" id="view-home" data-url="/home/"></div>
-      <div class="view view-init view-account tab" id="view-account" data-url="/account/"></div>
+      <div class="view view-init view-translate tab" id="view-translate" data-url="/translate/"></div>
+      <div class="view view-init view-account tab" id="view-account" data-url="/social/"></div>
 
 
     </div>
