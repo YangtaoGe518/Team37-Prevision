@@ -52,3 +52,55 @@ $$('#my-login-screen .login-button').on('click', function () {
   // Alert username and password
   app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
+
+//side panels
+$$('.open-prompt').on('click', function(){
+  app.dialog.prompt('Enter your new user name (demo only)', function(name){
+    app.dialog.confirm('Are you sure that your name is ' + name + '?', function(name){
+      app.dialog.alert('Set name as ' + name);
+    });
+  });
+});
+
+$$('.open-vertical-mother').on('click', function () {
+  app.dialog.create({
+    title: 'Mother Language',
+    text: 'Select your mother language(demo only)',
+    buttons: [
+      {
+        text: 'English',
+      },
+      {
+        text: 'French',
+      },
+      {
+        text: 'Chinese',
+      },
+    ],
+    verticalButtons: true,
+  }).open();
+});
+
+$$('.open-vertical-target').on('click', function () {
+  app.dialog.create({
+    title: 'Target Language',
+    text: 'Select your mother language(demo only)',
+    buttons: [
+      {
+        text: 'English',
+      },
+      {
+        text: 'French',
+      },
+      {
+        text: 'Chinese',
+      },
+    ],
+    verticalButtons: true,
+  }).open();
+});
+
+//log out
+$$('.reload').on('click', function(){
+  window.location.reload();
+});
