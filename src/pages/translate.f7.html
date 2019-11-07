@@ -41,7 +41,11 @@
     <div class="page-content">
       {{#if translation}}
       <div>
+        english:
         {{translation.label}}
+      </div>
+      <div>
+        french:
         {{translation.translation}}
       </div>
       {{else}}
@@ -73,6 +77,27 @@
               id: 'where-bank',
               label: "Where is the bank?",
               translation: "Où est la banque?",
+            },
+          ],
+        },
+        {
+          id: "greetings",
+          label: "Greetings",
+          next: [
+            {
+              id: 'my-name',
+              label: "my name is yangtao",
+              translation: "je m'appelle yangtao",
+            },
+            {
+              id: 'morning',
+              label: "Good morning!",
+              translation: "Bonjour!",
+            },
+            {
+              id: 'evening',
+              label: "Good evening!",
+              translation: "Bonsoir!",
             },
           ],
         },
