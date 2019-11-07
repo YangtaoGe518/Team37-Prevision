@@ -13,6 +13,14 @@
         <div class="searchbar-backdrop"></div>
         <form class="searchbar">
           <div class="searchbar-inner">
+            {{#if showBack}}
+            <div class="left">
+              <a href="/translate/" class="link back">
+                <i class="icon icon-back"></i>
+                <span class="if-not-md">Back</span>
+              </a>
+            </div>
+            {{/if}}
             <div class="searchbar-input-wrap">
               <input type="search" placeholder="Search">
               <i class="searchbar-icon"></i>
@@ -23,15 +31,93 @@
         </form>
       </div>
     </div>
-    
     <div class="page-content">
+      {{#if translation}}
+      <div>
+        {{translation.label}}
+        {{translation.translation}}
+      </div>
+      {{else}}
       <div class="list links-list">
         <ul>
-          <li><a href="/product/{{id}}/">Test</a></li>
+          {{#each page}}
+            <li><a href="/translate/{{id}}/">{{label}}</a></li>
+          {{/each}}
         </ul>
       </div>
+      {{/if}}
     </div>
   </div>
 </template>
 <script>
+  export default {
+    data: function () {
+      let pages = [
+        {
+          id: "where",
+          label: "Where?",
+          next: [
+            {
+              id: 'where-station',
+              label: "Where is the station?",
+              translation: "Ou est la gare?",
+            },
+            {
+              id: 'where-bank',
+              label: "Where is the bank?",
+              translation: "Où est la banque?",
+            },
+          ],
+        },
+        {
+          id: "time",
+          label: "Time",
+          next: [
+            {
+              id: 'what-time',
+              label: "What time is it?",
+              translation: "Quelle heure est-il?",
+            },
+            {
+              id: 'when-next-train',
+              label: "When is the next train?",
+              translation: "Quand part le prochain train?",
+            },
+          ]
+        },
+        {
+          id: "price",
+          label: "Price",
+          next: [
+            {
+              id: 'how-much',
+              label: "How much is it?",
+              translation: "C'est combien?",
+            },
+            {
+              id: 'too-much',
+              label: "That is too much!",
+              translation: "C'est trop!",
+            },
+          ],
+        },
+      ];
+      const translateId = this.$route.params.id;
+      let translation;
+      if (translateId) {
+        const temp = pages.find(el => el.id === translateId);
+        if (!temp) {
+          console.log(pages.map(el => el.next.find(el => el.id === translateId)).find(Boolean));
+          translation = pages.map(el => el.next.find(el => el.id === translateId)).find(Boolean);
+        }else {
+          pages = temp.next;
+        }
+      }
+      return {
+        showBack: !!translateId,
+        translation,
+        page: pages,
+      };
+    }
+  };
 </script>

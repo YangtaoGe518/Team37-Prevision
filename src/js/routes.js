@@ -16,6 +16,10 @@ var routes = [
     component: TranslatePage,
   },
   {
+    path: '/translate/:id/',
+    component: TranslatePage,
+  },
+  {
     path: '/social/',
     component: SocialPage,
   },
