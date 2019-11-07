@@ -3,42 +3,61 @@
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
-          <div class="left"></div>
-          <div class="title sliding">Translate</div>
-          <div class="right">
-            <a href="#" class="link icon-only panel-open" data-panel="right">
-              <i class="icon f7-icons if-not-md">person_crop_circle</i>
-              <i class="icon material-icons md-only">account_circle</i>
-            </a>
-          </div>
+        <div class="left"></div>
+        <div class="title sliding">Translate</div>
+        <div class="right">
+          <a href="#" class="link icon-only panel-open" data-panel="right">
+            <i class="icon f7-icons if-not-md">person_crop_circle</i>
+            <i class="icon material-icons md-only">account_circle</i>
+          </a>
+        </div>
       </div>
       <div class="title-large">
         <div class="title-large-text">Translate</div>
       </div>
-      <!-- search bar included in header -->
+
       <div class="subnavbar">
-        <div class="searchbar-backdrop"></div>
-        <form class="searchbar">
-          <div class="searchbar-inner">
-            {{#if showBack}}
-            <div class="left">
-              <a href="/translate/" class="link back">
-                <i class="icon icon-back"></i>
-                <span class="if-not-md">Back</span>
-              </a>
+        <div class="subnavbar-inner">
+          <!-- search bar included in header -->
+          <div class="searchbar-backdrop"></div>
+          <form class="searchbar">
+            <div class="searchbar-inner">
+              {{#if showBack}}
+              <div class="right">
+                <a href="/translate/" class="link back">
+                  <i class="icon icon-back"></i>
+                  <span class="if-not-md">Back</span>
+                </a>
+              </div>
+              {{/if}}
+              <div class="searchbar-input-wrap">
+                <input type="search" placeholder="Search">
+                <i class="searchbar-icon"></i>
+                <span class="input-clear-button"></span>
+              </div>
+              <span class="searchbar-disable-button">Cancel</span>
             </div>
-            {{/if}}
-            <div class="searchbar-input-wrap">
-              <input type="search" placeholder="Search">
-              <i class="searchbar-icon"></i>
-              <span class="input-clear-button"></span>
-            </div>
-            <span class="searchbar-disable-button">Cancel</span>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
+
     </div>
     <div class="page-content">
+      <!-- change the searching method -->
+      <div class="block block-strong">
+        <div class="row">
+        <span>Enable Smart Search</span>
+            <lable class="toggle toggle-init toggle-init">
+              <input type="checkbox" checked>
+              <span class="toggle-icon"></span>
+            </lable>
+        </div>
+      </div>
+
+      <!-- Normal Search -->
+
+
+      <!-- Smart Serach -->
       {{#if translation}}
       <div>
         {{translation.label}}
@@ -48,7 +67,7 @@
       <div class="list links-list">
         <ul>
           {{#each page}}
-            <li><a href="/translate/{{id}}/">{{label}}</a></li>
+          <li><a href="/translate/{{id}}/">{{label}}</a></li>
           {{/each}}
         </ul>
       </div>
@@ -116,7 +135,7 @@
         if (!temp) {
           console.log(pages.map(el => el.next.find(el => el.id === translateId)).find(Boolean));
           translation = pages.map(el => el.next.find(el => el.id === translateId)).find(Boolean);
-        }else {
+        } else {
           pages = temp.next;
         }
       }
