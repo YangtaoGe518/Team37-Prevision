@@ -1,4 +1,6 @@
 import flashcards from './flashcards.js';
+import videos from './videos.js';
+import site from './site.js';
 
 const convertNameToId = name => name
   .replace(/\s/g, '-')
@@ -17,6 +19,8 @@ const chooseRecommended = categories => Object.values(categories)
 
 let categories = {
   flashcards: buildMap(flashcards),
+  videos: buildMap(videos),
+  site: buildMap(site),
 };
 
 categories.recommended = chooseRecommended(categories);
