@@ -105,6 +105,13 @@ $$('.reload').on('click', function () {
   window.location.reload();
 });
 
+//Comment
+$$('.open-prompt-comment').on('click', function(){
+  app.dialog.prompt('Write Some Comments', function(){
+    app.dialog.alert('Successfully Comment!');
+  });
+});
+
 //enable Smart Translate
 // $$('.smart-translate').on('change', function(){
 //   var preference = document.getElementById("preference");

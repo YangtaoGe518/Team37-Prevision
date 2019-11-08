@@ -1,28 +1,142 @@
 <template>
-    <div class="page" data-name="video">
-      <div class="navbar">
-        <div class="navbar-bg"></div>
-        <div class="navbar-inner sliding">
-          <div class="left">
-            <a href="/" class="link back">
-              <i class="icon icon-back"></i>
-              <span class="if-not-md">Back</span>
-            </a>
-          </div>
-          <div class="title">{{video.name}}</div>
+  <div class="page" data-name="video">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="/" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
         </div>
-      </div>
-      <div class="page-content" style="background-image: url({{video.image}}); background-size: contain; background-repeat: no-repeat;">
+        <div class="title">{{video.name}}</div>
       </div>
     </div>
-  </template>
-  <script>
-    export default {
-      data: function () {
-        var videoId = this.$route.params.id;
-        return {
-          video: this.$root.categories.videos[videoId],
-        };
-      }
-    };
-  </script>
+
+    <div class="page-content">
+      <div class="card demo-card-header-pic">
+        <div style="background-image: url({{video.image}}); font-weight: bold;"
+          class="card-header align-items-flex-end">
+          {{video.name}}</div>
+        <div class="card-content card-content-padding">
+          <p class="date">Posted on Oct 31, 2019</p>
+          <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis
+            nibh hendrerit...</p>
+        </div>
+        <div class="card-footer">
+          <a href="#like" class="link">
+            <i class="icon f7-icons if-not-md">hand_thumbsup_fill</i>
+            <i class="icon material-icons md-only">thumb_up</i>
+          </a>
+
+          <a href="#" class="link open-prompt-comment">
+            <i class="icon f7-icons if-not-md">chat_bubble_text_fill</i>
+            <i class="icon material-icons md-only">chat</i>
+          </a>
+
+          <a href="https://www.youtube.com/watch?v=vfagYjuyONg" class="link external">
+            <i class="icon f7-icons if-not-md">play_circle_fill</i>
+            <i class="icon material-icons md-only">play_circle_filled</i>
+          </a>
+        </div>
+      </div>
+
+      <div class="comments">
+        <div class="list media-list">
+          <ul>
+            <li class="list-group-title">Comments</li>
+            <li class="item-content">
+              <div class="item-media">
+                <img src="https://placeimg.com/80/80/people/1" style="width: 40px; height: 40px; border-radius: 50%">
+              </div>
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">John Doe</div>
+                </div>
+                <div class="item-subtitle">French/English</div>
+                <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis et massa
+                  ac interdum. Cras consequat felis at consequat hendrerit. Aliquam vestibulum vitae lorem ac iaculis.
+                  Praesent nec pharetra massa, at blandit lectus. Sed tincidunt, lectus eu convallis elementum, nibh
+                  nisi aliquet urna, nec imperdiet felis sapien at enim.</div>
+              </div>
+            </li>
+
+            <li class="item-content">
+              <div class="item-media">
+                <img src="https://placeimg.com/80/80/people/1" style="width: 40px; height: 40px; border-radius: 50%">
+              </div>
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">Luis Woolley</div>
+                </div>
+                <div class="item-subtitle">English/Arabic</div>
+                <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis et massa
+                  ac interdum. Cras consequat felis at consequat hendrerit. Aliquam vestibulum vitae lorem ac iaculis.
+                  Praesent nec pharetra massa, at blandit lectus. Sed tincidunt, lectus eu convallis elementum, nibh
+                  nisi aliquet urna, nec imperdiet felis sapien at enim.</div>
+              </div>
+            </li>
+
+            <li class="item-content">
+              <div class="item-media">
+                <img src="https://placeimg.com/80/80/people/1" style="width: 40px; height: 40px; border-radius: 50%">
+              </div>
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">Jameel Whyte</div>
+                </div>
+                <div class="item-subtitle">English/Chinese</div>
+                <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis et massa
+                  ac interdum. Cras consequat felis at consequat hendrerit. Aliquam vestibulum vitae lorem ac iaculis.
+                  Praesent nec pharetra massa, at blandit lectus. Sed tincidunt, lectus eu convallis elementum, nibh
+                  nisi aliquet urna, nec imperdiet felis sapien at enim.</div>
+              </div>
+            </li>
+
+            <li class="item-content">
+              <div class="item-media">
+                <img src="https://placeimg.com/80/80/people/1" style="width: 40px; height: 40px; border-radius: 50%">
+              </div>
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">Kyran Kelly</div>
+                </div>
+                <div class="item-subtitle">Spanish/English</div>
+                <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis et massa
+                  ac interdum. Cras consequat felis at consequat hendrerit. Aliquam vestibulum vitae lorem ac iaculis.
+                  Praesent nec pharetra massa, at blandit lectus. Sed tincidunt, lectus eu convallis elementum, nibh
+                  nisi aliquet urna, nec imperdiet felis sapien at enim.</div>
+              </div>
+            </li>
+
+            <li class="item-content">
+              <div class="item-media">
+                <img src="https://placeimg.com/80/80/people/1" style="width: 40px; height: 40px; border-radius: 50%">
+              </div>
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">Nasir Allman</div>
+                </div>
+                <div class="item-subtitle">Italian/French</div>
+                <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis et massa
+                  ac interdum. Cras consequat felis at consequat hendrerit. Aliquam vestibulum vitae lorem ac iaculis.
+                  Praesent nec pharetra massa, at blandit lectus. Sed tincidunt, lectus eu convallis elementum, nibh
+                  nisi aliquet urna, nec imperdiet felis sapien at enim.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+    data: function () {
+      var videoId = this.$route.params.id;
+      return {
+        video: this.$root.categories.videos[videoId],
+      };
+    }
+  };
+</script>
