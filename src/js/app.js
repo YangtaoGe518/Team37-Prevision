@@ -54,9 +54,9 @@ $$('#my-login-screen .login-button').on('click', function () {
 });
 
 //side panels
-$$('.open-prompt').on('click', function(){
-  app.dialog.prompt('Enter your new user name (demo only)', function(name){
-    app.dialog.confirm('Are you sure that your name is ' + name + '?', function(name){
+$$('.open-prompt').on('click', function () {
+  app.dialog.prompt('Enter your new user name (demo only)', function (name) {
+    app.dialog.confirm('Are you sure that your name is ' + name + '?', function (name) {
       app.dialog.alert('Successfully Changing Name');
     });
   });
@@ -101,21 +101,46 @@ $$('.open-vertical-target').on('click', function () {
 });
 
 //log out
-$$('.reload').on('click', function(){
+$$('.reload').on('click', function () {
   window.location.reload();
 });
 
 //enable Smart Translate
-// var toggle = app.toggle.create(
-//   {
-//     el: '.toggle',
-//     on: {
-//       change: function(){
-//         console.log('toggle changed');
-//       }
+// $$('.smart-translate').on('change', function(){
+//   var preference = document.getElementById("preference");
+//   var toggle = app.toggle.get('.smart-translate');
+
+//     if (toggle.checked){
+//       preference.style.display = "block";
+//       console.log("checked");
+//     } else {
+//       preference.style.display = "none";
 //     }
-//   }
-// );
+// });
+
+var toggle = app.toggle.create(
+  {
+    el: '.toggle',
+    on: {
+      change: function () {
+        console.log('toggle changed');
+      }
+    }
+  }
+);
+
+toggle.on('change', function () {
+  var preference = document.getElementById("preference");
+  var toggle = app.toggle.get('.toggle');
+
+  if (toggle.checked) {
+    preference.style.display = "block";
+    console.log("checked");
+    alert("checked");
+  } else {
+    preference.style.display = "none";
+  }
+})
 
 // $$('#toggle-smart-translate .toggle').on('change', enablePreference(toggle));
 
