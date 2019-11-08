@@ -3,60 +3,154 @@
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
-          <div class="left"></div>
-          <div class="title sliding">Translate</div>
-          <div class="right">
-            <a href="#" class="link icon-only panel-open" data-panel="right">
-              <i class="icon f7-icons if-not-md">person_crop_circle</i>
-              <i class="icon material-icons md-only">account_circle</i>
-            </a>
-          </div>
+        <div class="left"></div>
+        <div class="title sliding">Translate</div>
+        <div class="right">
+          <a href="#" class="link icon-only panel-open" data-panel="right">
+            <i class="icon f7-icons if-not-md">person_crop_circle</i>
+            <i class="icon material-icons md-only">account_circle</i>
+          </a>
+        </div>
       </div>
       <div class="title-large">
         <div class="title-large-text">Translate</div>
       </div>
-      <!-- search bar included in header -->
+
       <div class="subnavbar">
-        <div class="searchbar-backdrop"></div>
-        <form class="searchbar">
-          <div class="searchbar-inner">
-            {{#if showBack}}
-            <div class="left">
-              <a href="/translate/" class="link back">
-                <i class="icon icon-back"></i>
-                <span class="if-not-md">Back</span>
-              </a>
+        <div class="subnavbar-inner">
+          <!-- search bar included in header -->
+          <div class="searchbar-backdrop"></div>
+          <form class="searchbar">
+            <div class="searchbar-inner">
+              {{#if showBack}}
+              <div class="right">
+                <a href="/translate/" class="link back">
+                  <i class="icon icon-back"></i>
+                  <span class="if-not-md">Back</span>
+                </a>
+              </div>
+              {{/if}}
+              <div class="searchbar-input-wrap">
+                <input type="search" placeholder="Search">
+                <i class="searchbar-icon"></i>
+                <span class="input-clear-button"></span>
+              </div>
+              <span class="searchbar-disable-button">Cancel</span>
             </div>
-            {{/if}}
-            <div class="searchbar-input-wrap">
-              <input type="search" placeholder="Search">
-              <i class="searchbar-icon"></i>
-              <span class="input-clear-button"></span>
-            </div>
-            <span class="searchbar-disable-button">Cancel</span>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
+
     <div class="page-content">
-      {{#if translation}}
-      <div>
-        english:
-        {{translation.label}}
+      <!-- change the searching method -->
+      <div class="select-search">
+        <div class="list">
+          <ul>
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-media">
+                  <i class="icon f7-icons if-not-md">book_fill</i>
+                  <i class="icon material-icons md-only">menu_book</i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">Quick Reference</div>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-media">
+                  <i class="icon f7-icons if-not-md">camera</i>
+                  <i class="icon material-icons md-only">camera_alt</i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">Image Translate</div>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <div class="item-content">
+                <div class="item-media">
+                  <i class="icon f7-icons if-not-md">lightbulb_fill</i>
+                  <i class="icon material-icons md-only">g_translate</i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">Enable Smart Translate</div>
+                  <div class="item-after">
+                    <lable class="toggle toggle-init">
+                      <input type="checkbox" class="smart-translate" id="toggle-smart-translate">
+                      <span class="toggle-icon"></span>
+                    </lable>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
       </div>
-      <div>
-        french:
-        {{translation.translation}}
+      <!-- Normal Search -->
+      <div class="normal-search">
+
+
       </div>
-      {{else}}
-      <div class="list links-list">
-        <ul>
-          {{#each page}}
+
+
+      <!-- Smart Serach -->
+      <div class="smart-search" id="preference" style="display:block">
+
+        <div class="list inset">
+          <ul>
+            <li class="list-group-title">Preference</li>
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title">Situation</div>
+                  <div class="item-after">Casual</div>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title">Target Age</div>
+                  <div class="item-after">30-40</div>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title">Tense</div>
+                  <div class="item-after">Past</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- {{#if translation}}
+        <div>
+          {{translation.label}}
+          {{translation.translation}}
+        </div>
+        {{else}}
+        <div class="list links-list">
+          <ul>
+            {{#each page}}
             <li><a href="/translate/{{id}}/">{{label}}</a></li>
-          {{/each}}
-        </ul>
+            {{/each}}
+          </ul>
+        </div>
+        {{/if}} -->
       </div>
-      {{/if}}
+
     </div>
   </div>
 </template>
@@ -77,27 +171,6 @@
               id: 'where-bank',
               label: "Where is the bank?",
               translation: "Où est la banque?",
-            },
-          ],
-        },
-        {
-          id: "greetings",
-          label: "Greetings",
-          next: [
-            {
-              id: 'my-name',
-              label: "my name is yangtao",
-              translation: "je m'appelle yangtao",
-            },
-            {
-              id: 'morning',
-              label: "Good morning!",
-              translation: "Bonjour!",
-            },
-            {
-              id: 'evening',
-              label: "Good evening!",
-              translation: "Bonsoir!",
             },
           ],
         },
@@ -141,7 +214,7 @@
         if (!temp) {
           console.log(pages.map(el => el.next.find(el => el.id === translateId)).find(Boolean));
           translation = pages.map(el => el.next.find(el => el.id === translateId)).find(Boolean);
-        }else {
+        } else {
           pages = temp.next;
         }
       }

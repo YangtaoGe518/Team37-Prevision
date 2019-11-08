@@ -54,10 +54,10 @@ $$('#my-login-screen .login-button').on('click', function () {
 });
 
 //side panels
-$$('.open-prompt').on('click', function(){
-  app.dialog.prompt('Enter your new user name (demo only)', function(name){
-    app.dialog.confirm('Are you sure that your name is ' + name + '?', function(name){
-      app.dialog.alert('Set name as ' + name);
+$$('.open-prompt').on('click', function () {
+  app.dialog.prompt('Enter your new user name (demo only)', function (name) {
+    app.dialog.confirm('Are you sure that your name is ' + name + '?', function (name) {
+      app.dialog.alert('Successfully Changing Name');
     });
   });
 });
@@ -101,15 +101,8 @@ $$('.open-vertical-target').on('click', function () {
 });
 
 //log out
-$$('.reload').on('click', function(){
+$$('.reload').on('click', function () {
   window.location.reload();
-});
-
-//Comment
-$$('.open-prompt-comment').on('click', function(){
-  app.dialog.prompt('Write Some Comments', function(){
-    app.dialog.alert('Successfully Comment!');
-  });
 });
 
 //enable Smart Translate

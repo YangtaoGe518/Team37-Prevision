@@ -5,6 +5,7 @@ import FlashcardPage from '../pages/flashcard.f7.html';
 import VideoPage from '../pages/video.f7.html';
 import SitePage from '../pages/site.f7.html';
 import NotFoundPage from '../pages/404.f7.html';
+import HelpPage from '../pages/help.f7.html';
 
 var routes = [
   {
@@ -34,6 +35,14 @@ var routes = [
   {
     path: '/site/:id/',
     component: SitePage,
+  },
+  {
+    path: '/help/',
+    component: HelpPage,
+  },
+  {
+    path: '/help/:id/',
+    component: HelpPage,
   },
   {
     path: '(.*)',
