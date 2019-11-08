@@ -104,3 +104,18 @@ $$('.open-vertical-target').on('click', function () {
 $$('.reload').on('click', function(){
   window.location.reload();
 });
+
+//enable Smart Translate
+$$('#toggle-smart-translate .input[type="checkbox"]').on('change', enablePreference);
+
+function enablePreference(){
+  var toggle = app.toggle.get('.toggle');
+  var preference = document.getElementById("preference");
+
+  if (toggle.checked){
+    preference.style.display = "block";
+    console.log("checked");
+  } else {
+    preference.style.display = "none";
+  }
+}

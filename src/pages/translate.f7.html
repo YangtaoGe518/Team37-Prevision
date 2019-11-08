@@ -40,38 +40,105 @@
           </form>
         </div>
       </div>
-
     </div>
+
     <div class="page-content">
       <!-- change the searching method -->
-      <div class="block block-strong">
-        <div class="row">
-        <span>Enable Smart Search</span>
-            <lable class="toggle toggle-init toggle-init">
-              <input type="checkbox" checked>
-              <span class="toggle-icon"></span>
-            </lable>
+      <div class="select-search">
+        <div class="list">
+          <ul>
+            <li>
+              <div class="item-content">
+                <div class="item-media">
+                  <i class="icon f7-icons if-not-md">camera</i>
+                  <i class="icon material-icons md-only">camera_alt</i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">Image Translate</div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="item-content">
+                <div class="item-media">
+                  <i class="icon f7-icons if-not-md">lightbulb_fill</i>
+                  <i class="icon material-icons md-only">g_translate</i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">Enable Smart Translate</div>
+                  <div class="item-after">
+                    <lable class="toggle toggle-init">
+                      <input type="checkbox" id="toggle-smart-translate">
+                      <span class="toggle-icon"></span>
+                    </lable>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+          </ul>
         </div>
       </div>
-
       <!-- Normal Search -->
+      <div class="normal-search">
+
+
+      </div>
 
 
       <!-- Smart Serach -->
-      {{#if translation}}
-      <div>
-        {{translation.label}}
-        {{translation.translation}}
+      <div class="smart-search" id="preference" style="display:block">
+
+        <div class="list inset">
+          <ul>
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title">Situation</div>
+                  <div class="item-after">Casual</div>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title">Target Age</div>
+                  <div class="item-after">30-40</div>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title">Tense</div>
+                  <div class="item-after">Past</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- {{#if translation}}
+        <div>
+          {{translation.label}}
+          {{translation.translation}}
+        </div>
+        {{else}}
+        <div class="list links-list">
+          <ul>
+            {{#each page}}
+            <li><a href="/translate/{{id}}/">{{label}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+        {{/if}} -->
       </div>
-      {{else}}
-      <div class="list links-list">
-        <ul>
-          {{#each page}}
-          <li><a href="/translate/{{id}}/">{{label}}</a></li>
-          {{/each}}
-        </ul>
-      </div>
-      {{/if}}
+
     </div>
   </div>
 </template>
