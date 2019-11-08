@@ -106,16 +106,26 @@ $$('.reload').on('click', function(){
 });
 
 //enable Smart Translate
-$$('#toggle-smart-translate .input[type="checkbox"]').on('change', enablePreference);
+// var toggle = app.toggle.create(
+//   {
+//     el: '.toggle',
+//     on: {
+//       change: function(){
+//         console.log('toggle changed');
+//       }
+//     }
+//   }
+// );
 
-function enablePreference(){
-  var toggle = app.toggle.get('.toggle');
-  var preference = document.getElementById("preference");
+// $$('#toggle-smart-translate .toggle').on('change', enablePreference(toggle));
 
-  if (toggle.checked){
-    preference.style.display = "block";
-    console.log("checked");
-  } else {
-    preference.style.display = "none";
-  }
-}
+// function enablePreference(toggle){
+//   var preference = document.getElementById("preference");
+
+//   if (toggle.checked){
+//     preference.style.display = "block";
+//     console.log("checked");
+//   } else {
+//     preference.style.display = "none";
+//   }
+// }
