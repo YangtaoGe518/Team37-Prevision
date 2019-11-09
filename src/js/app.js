@@ -32,7 +32,7 @@ var app = new Framework7({
   methods: {
     helloWorld: function () {
       app.dialog.alert('Hello World!');
-    },
+    }
   },
   routes: routes,
   // Register service worker
@@ -41,7 +41,7 @@ var app = new Framework7({
   },
 });
 
-// Login Screen Demo
+// Login Screen Dem
 $$('#my-login-screen .login-button').on('click', function () {
   var username = $$('#my-login-screen [name="username"]').val();
   var password = $$('#my-login-screen [name="password"]').val();
@@ -104,53 +104,3 @@ $$('.open-vertical-target').on('click', function () {
 $$('.reload').on('click', function () {
   window.location.reload();
 });
-
-//enable Smart Translate
-// $$('.smart-translate').on('change', function(){
-//   var preference = document.getElementById("preference");
-//   var toggle = app.toggle.get('.smart-translate');
-
-//     if (toggle.checked){
-//       preference.style.display = "block";
-//       console.log("checked");
-//     } else {
-//       preference.style.display = "none";
-//     }
-// });
-
-var toggle = app.toggle.create(
-  {
-    el: '.toggle',
-    on: {
-      change: function () {
-        console.log('toggle changed');
-      }
-    }
-  }
-);
-
-toggle.on('change', function () {
-  var preference = document.getElementById("preference");
-  var toggle = app.toggle.get('.toggle');
-
-  if (toggle.checked) {
-    preference.style.display = "block";
-    console.log("checked");
-    alert("checked");
-  } else {
-    preference.style.display = "none";
-  }
-})
-
-// $$('#toggle-smart-translate .toggle').on('change', enablePreference(toggle));
-
-// function enablePreference(toggle){
-//   var preference = document.getElementById("preference");
-
-//   if (toggle.checked){
-//     preference.style.display = "block";
-//     console.log("checked");
-//   } else {
-//     preference.style.display = "none";
-//   }
-// }
