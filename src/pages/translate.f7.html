@@ -43,12 +43,28 @@
     </div>
 
     <div class="page-content">
+      {{#if page}}
+      {{#if translation}}
+      <div>
+        {{translation.label}}
+        {{translation.translation}}
+      </div>
+      {{else}}
+      <div class="list links-list">
+        <ul>
+          {{#each page}}
+          <li><a href="/translate/{{id}}/">{{label}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/if}}
+      {{else}}
       <!-- change the searching method -->
       <div class="select-search">
         <div class="list">
           <ul>
             <li>
-              <a href="#" class="item-link item-content">
+              <a href="/translate/quick/" class="item-link item-content">
                 <div class="item-media">
                   <i class="icon f7-icons if-not-md">book_fill</i>
                   <i class="icon material-icons md-only">menu_book</i>
@@ -102,6 +118,7 @@
       <!-- Smart Serach -->
       <div class="smart-search" id="preference" style="display:block">
 
+
         <div class="list inset">
           <ul>
             <li class="list-group-title">Preference</li>
@@ -133,36 +150,18 @@
             </li>
           </ul>
         </div>
-
-
-        <!-- {{#if translation}}
-        <div>
-          {{translation.label}}
-          {{translation.translation}}
-        </div>
-        {{else}}
-        <div class="list links-list">
-          <ul>
-            {{#each page}}
-            <li><a href="/translate/{{id}}/">{{label}}</a></li>
-            {{/each}}
-          </ul>
-        </div>
-        {{/if}} -->
       </div>
-
+      {{/if}}
     </div>
   </div>
 </template>
 <script>
   export default {
     data: function () {
-      let pages = [
-        {
+      let pages = [{
           id: "where",
           label: "Where?",
-          next: [
-            {
+          next: [{
               id: 'where-station',
               label: "Where is the station?",
               translation: "Ou est la gare?",
@@ -177,8 +176,7 @@
         {
           id: "time",
           label: "Time",
-          next: [
-            {
+          next: [{
               id: 'what-time',
               label: "What time is it?",
               translation: "Quelle heure est-il?",
@@ -193,8 +191,7 @@
         {
           id: "price",
           label: "Price",
-          next: [
-            {
+          next: [{
               id: 'how-much',
               label: "How much is it?",
               translation: "C'est combien?",
@@ -209,6 +206,12 @@
       ];
       const translateId = this.$route.params.id;
       let translation;
+      if (translateId === 'quick') {
+        return {
+          showBack: true,
+          page: pages,
+        };
+      }
       if (translateId) {
         const temp = pages.find(el => el.id === translateId);
         if (!temp) {
@@ -217,6 +220,8 @@
         } else {
           pages = temp.next;
         }
+      } else {
+        return {};
       }
       return {
         showBack: !!translateId,
