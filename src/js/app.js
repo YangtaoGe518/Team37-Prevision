@@ -100,10 +100,11 @@ $$('.open-vertical-target').on('click', function () {
   }).open();
 });
 
-// help page
-$$('.open-help').on('click', function(){
-  
-});
+// // help page
+// $$('.open-help').on('click', function(){
+//   console.log(app);
+//   app.views.main.router.navigate('/help/', {reloadCurrent: true});
+// });
 
 //log out
 $$('.reload').on('click', function () {
