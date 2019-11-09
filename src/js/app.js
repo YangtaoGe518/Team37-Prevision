@@ -100,6 +100,11 @@ $$('.open-vertical-target').on('click', function () {
   }).open();
 });
 
+// help page
+$$('.open-help').on('click', function(){
+  
+});
+
 //log out
 $$('.reload').on('click', function () {
   window.location.reload();
