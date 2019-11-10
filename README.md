@@ -19,6 +19,7 @@ npm start
 Here are some notice for playing with the demo app:
 * Login page is only a **demo** which do not have real functionality, you can *login* without username
 * Search bars do not have actual functions, but you can still enter queries.
+* More instructions can be found in the 'help page' (Login -> MyAccount Icon -> Help)
 
 
 
