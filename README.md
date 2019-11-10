@@ -1,6 +1,22 @@
 # EzTalk
+
+## Authors
 This is the prevision coursework from team-37, by Yangtao Ge([YangtaoGe518](https://github.com/YangtaoGe518)), Ruairidh Williamson([RuairidhWilliamson](https://github.com/RuairidhWilliamson)), Afiq Bin Samsudin([Afiqsamsudin98](https://github.com/Afiqsamsudin98)).
 
+## Instrcution
+### Launch
+There are two ways to launch the app:
+* (Recommanded)Use the github page link to access the demo([demo](https://ucl-comp0016-team37.github.io/));
+* Run the source code from Local machine.
+
+### Notice
+Here are some notice for playing with the demo app:
+* Login page is only a **demo** which do not have real functionality, you can *login* without username
+* Search bars do not have actual functions, but you can still enter queries.
+
+
+
+## Abstrct
 EzTalk is a mobile application that will help refugees to learn a new language suitable for integration in their new communities. There are two major features: the app will include materials to help with learning new languages and cultures; it will also allow users to build common sentences in an easy and intuitive way to be translated. The app contains different media for learning including flashcards, videos and documents. 
 
 The flashcards allow users to view example sentences or phrase with an image to help remember it and an audio clip to help pronunciation. It could track user progress to give the user a sense of accomplishment and an incentive to learn more.  Words could be grouped by category to help learning specific topics. Educational multimedia about social, economic and culture integrate can be accessed through the app and link with the related vocabulary to strengthen the understanding of those words. Lastly, there are social networking capabilities for connecting people in similar situations. 
