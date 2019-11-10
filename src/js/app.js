@@ -149,11 +149,11 @@ function beginActivity(){
   if(cardState!=1){
    cardState=1;
    //togglePosition();
-   $("#card1").animate({top: "-=200"}, 150, function() {cardState=0;togglePosition();});
+   $("#card1").animate({top: "-=200"}, 150, function() {cardState=0;togglePosition1();});
    $("#card2").animate({top: "-=200"}, 150, function() {togglePosition2();});
   }//if
  });//click function
- 
+
  currentQuestion++;
 
  $("#button-area").empty();
@@ -163,9 +163,15 @@ function beginActivity(){
   if(currentQuestion<qbank.length){beginActivity();}
   else{displayFinalMessage();}
  });//click function
+
+ $$("#skip-button").on("click", function(){
+  if(currentQuestion<qbank.length){beginActivity();}
+  else{displayFinalMessage();}
+ });//click function
+
 }//beginactivity
 
-function togglePosition(){
+function togglePosition1(){
  if($("#card1").position().top==-200){$("#card1").css("top","400px");};
 }//toggle
 
@@ -177,5 +183,6 @@ function displayFinalMessage(){
  $("#button-area").empty();
  $("#card-area").empty();
  $("#card-area").append('<div id="finalMessage">You have finished the activity.</div>');
+ currentQuestion = 0;
 }//final message
 
