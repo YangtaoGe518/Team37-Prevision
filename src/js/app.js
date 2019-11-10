@@ -149,8 +149,8 @@ function beginActivity(){
   if(cardState!=1){
    cardState=1;
    //togglePosition();
-   $("#card1").animate({top: "-=200"}, 150, function() {cardState=0;togglePosition1();});
-   $("#card2").animate({top: "-=200"}, 150, function() {togglePosition2();});
+   $("#card1").animate({top: "-=400"}, 150, function() {cardState=0;togglePosition1();});
+   $("#card2").animate({top: "-=400"}, 150, function() {togglePosition2();});
   }//if
  });//click function
 
@@ -172,17 +172,18 @@ function beginActivity(){
 }//beginactivity
 
 function togglePosition1(){
- if($("#card1").position().top==-200){$("#card1").css("top","400px");};
+ if($("#card1").position().top==-400){$("#card1").css("top","400px");};
 }//toggle
 
 function togglePosition2(){
- if($("#card2").position().top==-200){$("#card2").css("top","400px");};
+ if($("#card2").position().top==-400){$("#card2").css("top","400px");};
 }//toggle2
 
 function displayFinalMessage(){
  $("#button-area").empty();
  $("#card-area").empty();
  $("#card-area").append('<div id="finalMessage">You have finished the activity.</div>');
+ //reset flashcard
  currentQuestion = 0;
 }//final message
 
