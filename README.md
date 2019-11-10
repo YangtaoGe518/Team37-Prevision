@@ -8,6 +8,11 @@ This is the prevision coursework from team-37, by Yangtao Ge([YangtaoGe518](http
 There are two ways to launch the app:
 * (Recommanded)Use the github page link to access the demo([demo](https://ucl-comp0016-team37.github.io/));
 * Run the source code from Local machine.
+Install node.js and run
+```
+npm i
+npm start
+```
 
 ### Notice
 Here are some notice for playing with the demo app:
