@@ -1,4 +1,5 @@
 # EzTalk
+An app for 'Refugee Integration and Digital Education, Literacy & Refugee Children'
 
 ## Authors
 This is the prevision coursework from team-37, by Yangtao Ge([YangtaoGe518](https://github.com/YangtaoGe518)), Ruairidh Williamson([RuairidhWilliamson](https://github.com/RuairidhWilliamson)), Afiq Bin Samsudin([Afiqsamsudin98](https://github.com/Afiqsamsudin98)).
