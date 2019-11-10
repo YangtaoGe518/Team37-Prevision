@@ -39,7 +39,10 @@
 
     <div class="page-content">
       {{#if userhelp}}
-      <div>
+      <div class="block-title">
+        {{userhelp.label}}
+      </div>
+      <div class="block">
         {{userhelp.usercontent}}
       </div>
       {{else}}
@@ -64,23 +67,23 @@
           next: [
           {
               id: 'content',
-              label: "content",
+              label: "Content",
               usercontent: "The home page displays all of the content relevant to the learning process of the user. it includes videos, flashcards and websites relevant to the user in order to learn the languages as well as the cultures. User can click on the like button(bottom left of content) to show that they love the content or click on the play buttoon(bottom right of the content) in order to be redirected to the webpage/flshcards as well as the videos. ",
             },
             {
               id: 'video',
-              label: "video",
-              usercontent: "video links in the app teaches users the classroom approach for the users to learn new languages or cultures it will includes contents of classroom teaching as well as short videos about practical uses of words. users can like the videos by clicking the like button(bottom left), comment(bottom middle) or play the video(bottom right). User comments is displayed below the videos.",
+              label: "Video",
+              usercontent: "Video links in the app teaches users the classroom approach for the users to learn new languages or cultures it will includes contents of classroom teaching as well as short videos about practical uses of words. users can like the videos by clicking the like button(bottom left), comment(bottom middle) or play the video(bottom right). User comments is displayed below the videos.",
             },
             {
               id: 'webpage',
-              label: "webpage",
-              usercontent: "webpage is a link to external website which gives the user an additional reading to learn new culture relevant to their learning languages. users can like the content by clicking the like button(bottom left), comment(bottom middle) or play the video(bottom right). User comments is displayed below the contents.",
+              label: "Webpage",
+              usercontent: "Webpage is a link to external website which gives the user an additional reading to learn new culture relevant to their learning languages. users can like the content by clicking the like button(bottom left), comment(bottom middle) or play the video(bottom right). User comments is displayed below the contents.",
             },
             {
               id: 'flashcard',
-              label: "flashcard",
-              usercontent: "flashcard is one of the main source of the app. by clicking the flashcard users will be directed to a word associated with the flashcard as well as the translation of the word to their learning languages.",
+              label: "Flashcard",
+              usercontent: "Flashcard is one of the main source of the app. by clicking the flashcard users will be directed to a word associated with the flashcard as well as the translation of the word to their learning languages.",
             },
           ],
         },
@@ -90,7 +93,7 @@
           next: [
             {
               id: 'socialcontents',
-              label: "contents",
+              label: "Contents",
               usercontent: "social page is where users can interact with other users to increase the incentive of learning process. users can post inormations in form of pictures,flashcards, videos or any relevant sources to make the learning process more fun! Users can click the like button, comments or share the post to their friends in the app.",
             },
           ],
@@ -101,13 +104,13 @@
           next: [
             {
               id: 'translatecontents',
-              label: "contents",
-              usercontent: "translate page would help users to have a quick help to communicate with speakers of their target language by providing a quick and reliable translation services. the service include quick reference, image translations as well as option to enable smart translate. In addition users could also generate words based on their situations by toggling on the preferences.",
+              label: "Contents",
+              usercontent: "Translate page would help users to have a quick help to communicate with speakers of their target language by providing a quick and reliable translation services. the service include quick reference, image translations as well as option to enable smart translate. In addition users could also generate words based on their situations by toggling on the preferences.",
             },
             {
               id: 'preference',
-              label: "preferences",
-              usercontent: "preferences would allow users to generate a quick sentences which is relevant for their situations. By choosing their preferences, sentences which is build according to the local speaking accent is build in order to create a more positive experience without the awkwardness of a formal languages.",
+              label: "Preferences",
+              usercontent: "Preferences would allow users to generate a quick sentences which is relevant for their situations. By choosing their preferences, sentences which is build according to the local speaking accent is build in order to create a more positive experience without the awkwardness of a formal languages.",
             },
           ]
         },
@@ -117,8 +120,8 @@
           next: [
             {
               id: 'myaccount',
-              label: "myAccount",
-              usercontent: "by clicking on the person icons on top right, user are able to manage their account with options to change username, update target/learning language as well as changing the settings of the app. Users are able to change their name and profile picture in this panel as well.",
+              label: "MyAccount",
+              usercontent: "By clicking on the person icons on top right, user are able to manage their account with options to change username, update target/learning language as well as changing the settings of the app. Users are able to change their name and profile picture in this panel as well.",
             },
           ],
         },
@@ -128,7 +131,6 @@
       if (helpId) {
         const temp = pages.find(el => el.id === helpId);
         if (!temp) {
-          console.log(pages.map(el => el.next.find(el => el.id === helpId)).find(Boolean));
           userhelp = pages.map(el => el.next.find(el => el.id === helpId)).find(Boolean);
         }else {
           pages = temp.next;

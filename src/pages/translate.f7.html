@@ -3,8 +3,8 @@
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
-        <div class="left">    
-            {{#if showBack}} 
+        <div class="left">
+          {{#if showBack}}
           <a href="/" class="link back">
             <i class="icon icon-back"></i>
             <span class="if-not-md">Back</span>
@@ -33,7 +33,7 @@
               <div class="right">
                 <a href="/translate/" class="link back">
                   <i class="icon icon-back"></i>
-                  <span class="if-not-md">Back</span> 
+                  <span class="if-not-md">Back</span>
                 </a>
               </div>
               {{/if}}
@@ -103,7 +103,8 @@
                 <div class="item-inner">
                   <div class="item-title">Enable Smart Translate</div>
                   <div class="item-after">
-                    <label class="toggle toggle-init" onchange="document.querySelector('#preference').style.display = document.querySelector('#preference').style.display === 'none' ? 'block' : 'none';">
+                    <label class="toggle toggle-init"
+                      onchange="document.querySelector('#preference').style.display = document.querySelector('#preference').style.display === 'none' ? 'block' : 'none';">
                       <input type="checkbox" class="smart-translate" id="toggle-smart-translate">
                       <span class="toggle-icon"></span>
                     </label>
@@ -129,7 +130,12 @@
               <a href="#" class="item-link item-content">
                 <div class="item-inner">
                   <div class="item-title">Situation</div>
-                  <div class="item-after">Casual</div>
+                  <div class="item-after">
+                    <select>
+                      <option selected="selected" value="casual">Casual</option>
+                      <option value="formal">Formal</option>
+                    </select>
+                  </div>
                 </div>
               </a>
             </li>
@@ -138,7 +144,16 @@
               <a href="#" class="item-link item-content">
                 <div class="item-inner">
                   <div class="item-title">Target Age</div>
-                  <div class="item-after">30-40</div>
+                  <div class="item-after">
+                    <select>
+                      <option value="10">0-10</option>
+                      <option value="20">11-20</option>
+                      <option selected="selected" value="30">21-30</option>
+                      <option value="40">31-40</option>
+                      <option value="50">41-50</option>
+                      <option value="60">51+</option>
+                    </select>
+                  </div>
                 </div>
               </a>
             </li>
@@ -147,7 +162,13 @@
               <a href="#" class="item-link item-content">
                 <div class="item-inner">
                   <div class="item-title">Tense</div>
-                  <div class="item-after">Past</div>
+                  <div class="item-after">
+                    <select>
+                      <option selected="selected" value="Past">Past</option>
+                      <option value="Present">Present</option>
+                      <option value="Future">Future</option>
+                    </select>
+                  </div>
                 </div>
               </a>
             </li>
