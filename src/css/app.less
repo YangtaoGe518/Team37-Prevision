@@ -1,4 +1,25 @@
 /* Your app custom styles here */
+// app scope styles:
+:root{
+
+}
+
+:root.theme-dark{
+
+}
+
+.ios{
+  //button size
+
+}
+
+.md{
+  
+}
+
+.aurora{
+
+}
 
 /*Home page feeds*/
 .demo-card-header-pic .card-header{
@@ -83,4 +104,47 @@
   font-weight: bold;
   font-size: 20px;
 }
+
+.side-panel .button-area{
+  --f7-button-height: 30px;
+}
+
+/*flashcard*/
+//card
+.flashcard #card-area{
+  width:300px;
+  height:400px;
+  margin:auto;
+  margin-top:100px;
+  border:3px solid #ABB7B7;
+  border-radius:5px;
+  position:relative;
+  overflow:hidden;
+}
+
+.flashcard .card{
+  width:300px;
+  height:400px;
+  position:absolute;
+  text-align:center;
+  line-height:200px;
+  font-size:45px;
+  color:#efefef;
+  cursor:pointer;
+}
+
+//button
+.flashcard #button-area{
+  margin-top: 50px;
+  --f7-button-height: 35px;
+}
+
+//final message
+#finalMessage{
+  text-align:center;
+  font-size:30px;
+  margin-top:30px;
+  font-family:Montserrat,Arial;
+ }
+
 
