@@ -1,0 +1,28 @@
+{
+    "questionlist": [
+        {
+            "cardfront": "Tower",
+            "cardback": "Un tour"
+        },
+        {
+            "cardfront": "Tomb",
+            "cardback": "Un tombeau"
+        },
+        {
+            "cardfront": "Neighborhood",
+            "cardback": "Un quariter"
+        },
+        {
+            "cardfront": "Parade",
+            "cardback": "Un défilé"
+        },
+        {
+            "cardfront": "Garden",
+            "cardback": "Un jardin"
+        },
+        {
+            "cardfront": "Fireworks",
+            "cardback": "Un feu d'artifice"
+        }
+    ]
+}
