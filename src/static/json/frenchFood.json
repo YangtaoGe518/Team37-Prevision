@@ -1,28 +1,28 @@
 {
     "questionlist": [
         {
-            "cardfront": "CAT",
-            "cardback": "GATO"
+            "cardfront": "Pear",
+            "cardback": "La poire"
         },
         {
-            "cardfront": "DOG",
-            "cardback": "PERRO"
+            "cardfront": "Ice cream",
+            "cardback": "La glace"
         },
         {
-            "cardfront": "HORSE",
-            "cardback": "CABALLO"
+            "cardfront": "Tomato",
+            "cardback": "La tomate"
         },
         {
-            "cardfront": "RABBIT",
-            "cardback": "CONEJO"
+            "cardfront": "Rice",
+            "cardback": "Le riz"
         },
         {
-            "cardfront": "TIGER",
-            "cardback": "TIGRE"
+            "cardfront": "Cake",
+            "cardback": "La gâteau"
         },
         {
-            "cardfront": "KANGAROO",
-            "cardback": "CANGURO"
+            "cardfront": "Milk",
+            "cardback": "Le Lait"
         }
     ]
 }
